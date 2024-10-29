@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de inicio</title>
+    <title>Pantalla Principal</title>
     <style>
         /* Estilos para el fondo */
         body {
             /* URL de la imagen de fondo */
-            background-image: url('https://es.wikipedia.org/wiki/J%C3%A1vea#/media/https://es.wikipedia.org/wiki/J%C3%A1vea#/media/Archivo:J%C3%A1vea_desde_el_Montg%C3%B3.jpg:J%C3%A1vea_desde_el_Montg%C3%B3.jpgh/upload.wikimedia.org/https://es.wikipedia.org/wiki/J%C3%A1vea#/media/Archivo:J%C3%A1vea_desde_el_Montg%C3%B3.jpg/commons/thumb/d/df/Faro_del_cabo_de_la_Nao.JPG/330px-Faro_del_cabo_de_la_Nao.JPG');
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/J%C3%A1vea_desde_el_Montg%C3%B3.jpg/1280px-J%C3%A1vea_desde_el_Montg%C3%B3.jpg');
             background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
             background-repeat: no-repeat;
             background-position: center;
@@ -24,40 +24,86 @@
             justify-content: center;            
         }
 
-        /* Contenedor para el contenido centrado */
-        .box1 {
-            color: #333;
-            font-family: Arial, sans-serif;
-            margin: 40%;
-            text-align: center;
-            padding: 10%;
-            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el contenido */
+        /* Caja que contiene las columnas */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 80%;
+            
             border-radius: 8px;
         }
-        .box2 {
-            margin: 0% 0% 50% 0%;
-            padding: 10px 20px;
-            background-color: #6c98c8;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+        /*Columnas*/
+        .column {
+            
+            flex: 1; /* Permite que ambas columnas ocupen el mismo espacio */
         }
-        .box2:hover {
-            background-color: #6c98c8;
+        /* Estilo para las cajas dentro de las columnas */
+        .box {
+            margin: 10% 10%;
+            background-color: #3498db;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+            background-color: #000000;
+        }
+        .imagen {
+            margin: 3%;
+            width: 100%; /* Ancho de la caja en porcentaje */
+            height: 100%; /* Altura fija */
+            overflow: hidden; /* Oculta parte de la imagen que sobresalga */
+        }
+        .imagen-box img {
+            width: 100%; /* Ajusta la imagen al ancho de la caja interior */
+            border-radius: 5px;
+        }
+        .texto-titulo {
+            margin: 0% 10% 40% 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #00000045; /* Fondo oscuro */
+            color: cyan; /* Color del texto */
+            font-size: 12px; /* Tamaño de fuente */
         }
     </style>
 </head>
 <body>
-    <div class="box1">
-        <h1>Bienvenido a MarkedPoints</h1>
-        <p>Te encuentras en Jávea.</p>
-    
-    </div>
-    <div class="box2">
-        <button onclick="window.location.href='https://luklpz.github.io/WIKIPEDIA/PantallaPrincipal.html';">
-            Ver puntos de interés
-        </button>
+    <div class="container">
+        <!-- Primera columna -->
+        <div class="column">
+            <div class="box">
+                <div class="imagen imagen-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/IglesiaSantBertomeuXabia.jpg/330px-IglesiaSantBertomeuXabia.jpg" alt="Iglesia de San bartolomeu">
+                    
+                </div>
+            </div>
+            <div class="texto-titulo">
+                <p>Iglesia de San Bartolomé</p>
+            </div>
+            
+            <div class="box">
+                <h3>Caja 2</h3>
+                <p>Contenido de la caja 2 en la columna 1.</p>
+            </div>
+        </div>
+
+        <!-- Segunda columna -->
+        <div class="column">
+            <div class="box">
+                <h3>Caja 1</h3>
+                <p>Contenido de la caja 1 en la columna 1.</p>
+            </div>
+            <div class="box">
+                <h3>Caja 2</h3>
+                <p>Contenido de la caja 2 en la columna 1.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
