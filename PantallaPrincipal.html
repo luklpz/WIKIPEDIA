@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de inicio</title>
+    <style>
+        /* Estilos para el fondo */
+        body {
+            /* URL de la imagen de fondo */
+            background-image: url('https://es.wikipedia.org/wiki/J%C3%A1vea#/media/https://es.wikipedia.org/wiki/J%C3%A1vea#/media/Archivo:J%C3%A1vea_desde_el_Montg%C3%B3.jpg:J%C3%A1vea_desde_el_Montg%C3%B3.jpgh/upload.wikimedia.org/https://es.wikipedia.org/wiki/J%C3%A1vea#/media/Archivo:J%C3%A1vea_desde_el_Montg%C3%B3.jpg/commons/thumb/d/df/Faro_del_cabo_de_la_Nao.JPG/330px-Faro_del_cabo_de_la_Nao.JPG');
+            background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat;
+            background-position: center;
+
+            /* Transparencia del fondo */
+            background-color: rgba(255, 255, 255, 0.5); /* Ajusta la opacidad cambiando el último valor (0.5 en este caso) */
+            background-blend-mode: overlay;  /* Mezcla la imagen con el color para lograr la transparencia */
+            
+            /* Resto de ajustes */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;            
+        }
+
+        /* Contenedor para el contenido centrado */
+        .box1 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 40%;
+            text-align: center;
+            padding: 10%;
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el contenido */
+            border-radius: 8px;
+        }
+        .box2 {
+            margin: 0% 0% 50% 0%;
+            padding: 10px 20px;
+            background-color: #6c98c8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .box2:hover {
+            background-color: #6c98c8;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>Bienvenido a MarkedPoints</h1>
+        <p>Te encuentras en Jávea.</p>
+    
+    </div>
+    <div class="box2">
+        <button onclick="window.location.href='https://luklpz.github.io/WIKIPEDIA/PantallaPrincipal.html';">
+            Ver puntos de interés
+        </button>
+    </div>
+</body>
+</html>
