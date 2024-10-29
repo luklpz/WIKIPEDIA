@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondo con transparencia</title>
+    <title>Pantalla de inicio</title>
     <style>
         /* Estilos para el fondo */
         body {
             /* URL de la imagen de fondo */
-            background-image: url('URL_DE_LA_IMAGEN_AQUI');
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Faro_del_cabo_de_la_Nao.JPG/330px-Faro_del_cabo_de_la_Nao.JPG');
             background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
             background-repeat: no-repeat;
             background-position: center;
@@ -18,19 +18,17 @@
             background-blend-mode: overlay;  /* Mezcla la imagen con el color para lograr la transparencia */
             
             /* Resto de ajustes */
-            margin: 0;
-            height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            color: #333;
+            justify-content: center;            
         }
 
         /* Contenedor para el contenido centrado */
         .content {
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 40%;
             text-align: center;
-            padding: 20px;
+            padding: 10%;
             background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el contenido */
             border-radius: 8px;
         }
@@ -38,8 +36,8 @@
 </head>
 <body>
     <div class="content">
-        <h1>Bienvenido</h1>
-        <p>Este es un ejemplo de fondo con imagen semitransparente.</p>
+        <h1>Bienvenido a MarkedPoints</h1>
+        <p>Te encuentras en Jávea.</p>
     </div>
 </body>
 </html>
