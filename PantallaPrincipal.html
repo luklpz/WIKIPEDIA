@@ -24,6 +24,18 @@
             justify-content: center;            
         }
 
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #b2d8ff;
+            border-color: #000000;
+            border-width: 1px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
         /* Caja que contiene las columnas */
         .container {
             display: flex;
@@ -71,16 +83,46 @@
             color: cyan; /* Color del texto */
             font-size: 12px; /* Tamaño de fuente */
         }
+        .counter-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 5%;
+        }
+
+        .counter-box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .counter-box button:hover {
+            background-color: #45a049;
+        }
+
+        .number-display {
+            font-size: 20px;
+            font-weight: bold;
+            width: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <div style="margin: 5%;" class="title">Cerca de ti</div>
     <div class="container">
         <!-- Primera columna -->
         <div class="column">
             <div class="box">
                 <div class="imagen imagen-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/IglesiaSantBertomeuXabia.jpg/330px-IglesiaSantBertomeuXabia.jpg" alt="Iglesia de San bartolomeu">
-                    
+                    <a href="https://luklpz.github.io/WIKIPEDIA/IglesiaSanBartolome.html" target="_blank"> <!-- Cambia el enlace aquí -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/IglesiaSantBertomeuXabia.jpg/330px-IglesiaSantBertomeuXabia.jpg" alt="Iglesia de San bartolomeu" class="clickable-image">
+                    </a>
                 </div>
             </div>
             <div class="texto-titulo">
@@ -88,22 +130,68 @@
             </div>
             
             <div class="box">
-                <h3>Caja 2</h3>
-                <p>Contenido de la caja 2 en la columna 1.</p>
+                <div class="imagen imagen-box">
+                    <a href="https://luklpz.github.io/WIKIPEDIA/IglesiaSanBartolome.html" target="_blank"> <!-- Cambia el enlace aquí -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/J%C3%A1vea03_17-8-03.JPG/330px-J%C3%A1vea03_17-8-03.JPG" alt="Playa del arenal" class="clickable-image">
+                    </a>
+                </div>
+            </div>
+            <div class="texto-titulo">
+                <p>Playa del arenal</p>
             </div>
         </div>
 
         <!-- Segunda columna -->
         <div class="column">
             <div class="box">
-                <h3>Caja 1</h3>
-                <p>Contenido de la caja 1 en la columna 1.</p>
+                <div class="imagen imagen-box">
+                    <a href="https://luklpz.github.io/WIKIPEDIA/IglesiaDelLoreto.html" target="_blank"> <!-- Cambia el enlace aquí -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Iglesia_de_Nuestra_Se%C3%B1ora_de_Loreto_de_X%C3%A0bia.jpg/330px-Iglesia_de_Nuestra_Se%C3%B1ora_de_Loreto_de_X%C3%A0bia.jpg" alt="Iglesia del Loreto" class="clickable-image">
+                    </a>
+                </div>
             </div>
+            <div class="texto-titulo">
+                <p>Iglesia del Loreto</p>
+            </div>
+            
             <div class="box">
-                <h3>Caja 2</h3>
-                <p>Contenido de la caja 2 en la columna 1.</p>
+                <div class="imagen imagen-box">
+                    <a href="https://luklpz.github.io/WIKIPEDIA/CalaDeLaGranadella.html" target="_blank"> <!-- Cambia el enlace aquí -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Cala_de_la_Granadella%2C_J%C3%A1vea%2C_Espa%C3%B1a%2C_2014-07-01%2C_DD_37.JPG/330px-Cala_de_la_Granadella%2C_J%C3%A1vea%2C_Espa%C3%B1a%2C_2014-07-01%2C_DD_37.JPG" alt="Cala de la Granadella" class="clickable-image">
+                    </a>
+                </div>
+            </div>
+            <div class="texto-titulo">
+                <p>Cala de la Granadella</p>
             </div>
         </div>
     </div>
+    <div class="counter-box">
+        <button id="botonrestar">-</button>
+        <div id="number-display" class="number-display">1</div>
+        <button id="botonsumar">+</button>
+    </div>
+    <script>
+        // JavaScript para incrementar y decrementar el número
+        const numberDisplay = document.getElementById('number-display');
+        const botonRestar = document.getElementById('botonrestar');
+        const botonSumar = document.getElementById('botonsumar');
+
+        let count = 1; // Valor inicial del contador
+
+        // Función para restar 1
+        botonRestar.addEventListener('click', () => {
+            if (count > 1) { // Evita que baje de 1
+                count--;
+                numberDisplay.textContent = count + ' km'; // Muestra el valor en kilómetros
+            }
+        });
+
+        // Función para sumar 1
+        botonSumar.addEventListener('click', () => {
+            count++;
+            numberDisplay.textContent = count + ' km'; // Muestra el valor en kilómetros
+        });
+    </script>
 </body>
 </html>
